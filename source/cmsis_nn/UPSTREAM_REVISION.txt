@@ -1,0 +1,4 @@
+22080c68d040c98139e6cb1549473e3149735f4d
+Modified files:
+Source/ConvolutionFunctions/arm_convolve_s8.c
+Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c

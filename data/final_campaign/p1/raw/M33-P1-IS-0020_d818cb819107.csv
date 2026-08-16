@@ -1,0 +1,5 @@
+firmware_id,mode,trial,cycles,status,syndrome,checks,abft_syndrome,abft_checks,accepted,max_abs_error,checksum,crash_magic,crash_count
+m33_cmsis_hardened_p1,34,0,43081,0,196608,96,3,12,0,74,987181381,0,0
+m33_cmsis_hardened_p1,34,1,42809,0,196608,96,3,12,0,73,987181381,0,0
+m33_cmsis_hardened_p1,34,2,42825,0,196608,96,3,12,0,74,987181381,0,0
+m33_cmsis_hardened_p1,34,3,42871,0,196608,96,3,12,0,72,987181381,0,0

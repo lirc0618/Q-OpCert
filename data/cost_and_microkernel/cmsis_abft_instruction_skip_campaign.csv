@@ -1,0 +1,7 @@
+mutant_id,target_function,relative_address,instruction_bytes,category,hypothesis
+AF-01,arm_nn_mat_mult_kernel_s8_s16,0x0d4,4,main_mac_0,ABFT should detect activated main accumulator error
+AF-02,arm_nn_mat_mult_kernel_s8_s16,0x0da,4,main_mac_1,ABFT should detect activated main accumulator error
+AF-03,arm_nn_mat_mult_kernel_s8_s16,0x322,2,main_channel_sum,ABFT should detect inconsistency in main channel checksum
+AF-04,qopcert_cmsis_abft_check,0x024,4,abft_dot_product,Self-fault may cause false rejection or miss depending on activation
+AF-05,qopcert_cmsis_abft_check,0x034,2,abft_compare,Skipping first comparison may bypass column-zero detection
+AF-06,qopcert_cmsis_abft_check,0x040,4,abft_syndrome_store,Skipping first syndrome store may bypass column-zero detection

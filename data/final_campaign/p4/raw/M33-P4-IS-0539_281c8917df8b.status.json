@@ -1,0 +1,11 @@
+{
+  "status": "HANG",
+  "rows": 0,
+  "unique_trials": 0,
+  "end_seen": false,
+  "header_seen": true,
+  "hardfault_seen": false,
+  "detail": "header received but no trial or END before timeout",
+  "firmware_sha256": "281c8917df8b535810b35ff457d27e6c977c1c6d8b815207e2527a34914a8ee1",
+  "binary_note": "Mutant binary omitted; firmware_sha256 preserves identity."
+}

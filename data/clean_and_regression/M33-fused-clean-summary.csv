@@ -1,0 +1,4 @@
+"variant","rows","median","mean","min","max","overhead_pct","checksum_mismatch","bad_checks","bad_syndrome","bad_accept","bad_error"
+"baseline","128","5277","5278.45","5277","5345","0","0","0","0","0","0"
+"shadow","128","5822","5823.98","5822","5985","10.328","0","0","0","0","0"
+"exact","128","5934","5935.59","5934","6078","12.45","0","0","0","0","0"

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "rows": 128,
+  "unique_trials": 128,
+  "end_seen": true,
+  "header_seen": true,
+  "hardfault_seen": false,
+  "detail": "128 unique trials and END received",
+  "firmware_sha256": "56f9b591d3e1abdf4680765b5344d83a48530536b705e877b6435190c0d082cf",
+  "binary_note": "Mutant binary omitted; firmware_sha256 preserves identity."
+}

@@ -1,0 +1,5 @@
+regression_id,main_fault,rail_fault,expected_result,statistics_scope
+HR-01,main MAC column 0,primary comparison call skip,secondary rail rejects,compound hardening regression
+HR-02,main MAC column 0,secondary comparison call skip,primary rail rejects,compound hardening regression
+HR-03,main MAC column 0,primary rail state store skip,secondary rail rejects,compound hardening regression
+HR-04,main MAC column 0,secondary rail state store skip,primary rail rejects,compound hardening regression

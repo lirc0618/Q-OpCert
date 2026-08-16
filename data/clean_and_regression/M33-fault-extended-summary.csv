@@ -1,0 +1,5 @@
+id,rows,activated,rejected,warning,masked,silent_accept,classification
+M33-AF-03,128,128,128,128,0,0,activated_rejected
+M33-AF-04,128,128,128,128,0,0,activated_rejected
+M33-AF-05,128,0,0,0,128,0,masked_control
+M33-AF-06,128,0,0,0,128,0,masked_control

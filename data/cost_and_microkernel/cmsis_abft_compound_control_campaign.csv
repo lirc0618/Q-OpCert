@@ -1,0 +1,3 @@
+compound_id,first_fault,second_fault,purpose,statistics_scope
+CF-01,AF-01 main MAC column 0,AF-05 first-column comparison skip,Test whether compare skip bypasses an activated MAC error,Exclude from single-fault detection rate
+CF-02,AF-01 main MAC column 0,AF-06 first-column syndrome store skip,Test whether syndrome-store skip bypasses an activated MAC error,Exclude from single-fault detection rate

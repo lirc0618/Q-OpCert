@@ -1,0 +1,11 @@
+{
+  "status": "PARTIAL",
+  "rows": 4,
+  "unique_trials": 4,
+  "end_seen": false,
+  "header_seen": true,
+  "hardfault_seen": false,
+  "detail": "received 4 rows/4 unique trials; END=no",
+  "firmware_sha256": "d818cb81910724c7a74b32c0af5cf2afdaa9996ded49376aae1d0af61a7d93f6",
+  "binary_note": "Mutant binary omitted; firmware_sha256 preserves identity."
+}

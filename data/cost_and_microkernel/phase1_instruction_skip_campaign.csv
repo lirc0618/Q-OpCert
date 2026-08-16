@@ -1,0 +1,164 @@
+campaign_id,priority,function,relative_address,instruction_bytes,original_encoding,nop_encoding_little_endian_bytes,opcode,operands,phase,category,candidate_fault,source_line,execution_instance_policy,status
+IS-0001,2,qopcert_exact_requantize,0x4,2,4253,00 bf,rsbs,"r3, r2, #0",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,42,all dynamic instances first; then selected iteration/channel,planned
+IS-0002,1,qopcert_exact_requantize,0x6,2,2a00,00 bf,cmp,"r2, #0x0",REQUANT_CONTROL,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,42,all dynamic instances first; then selected iteration/channel,planned
+IS-0003,1,qopcert_exact_requantize,0x8,4,fa00 fc0c,00 bf 00 bf,lsl.w,"r12, r0, r12",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,43,all dynamic instances first; then selected iteration/channel,planned
+IS-0004,2,qopcert_exact_requantize,0xc,4,f04f 0200,00 bf 00 bf,mov.w,"r2, #0x0",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,43,all dynamic instances first; then selected iteration/channel,planned
+IS-0005,2,qopcert_exact_requantize,0x10,4,f04f 4080,00 bf 00 bf,mov.w,"r0, #0x40000000",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,43,all dynamic instances first; then selected iteration/channel,planned
+IS-0006,1,qopcert_exact_requantize,0x14,4,fbcc 0201,00 bf 00 bf,smlal,"r0, r2, r12, r1",HIGH_MULTIPLY,REQUANT_MULTIPLY,F6B_SKIP_HIGH_MULT,44,all dynamic instances first; then selected iteration/channel,planned
+IS-0007,2,qopcert_exact_requantize,0x18,4,f04f 31ff,00 bf 00 bf,mov.w,"r1, #0xffffffff",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,44,all dynamic instances first; then selected iteration/channel,planned
+IS-0008,1,qopcert_exact_requantize,0x1c,2,bfc8,00 bf,it,gt,REQUANT_CONTROL,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,42,all dynamic instances first; then selected iteration/channel,planned
+IS-0009,2,qopcert_exact_requantize,0x1e,2,2300,00 bf,movgt,"r3, #0x0",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,42,all dynamic instances first; then selected iteration/channel,planned
+IS-0010,1,qopcert_exact_requantize,0x20,2,0fc0,00 bf,lsrs,"r0, r0, #0x1f",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,45,all dynamic instances first; then selected iteration/channel,planned
+IS-0011,1,qopcert_exact_requantize,0x22,2,4099,00 bf,lsls,"r1, r3",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,46,all dynamic instances first; then selected iteration/channel,planned
+IS-0012,1,qopcert_exact_requantize,0x34,2,4118,00 bf,asrs,"r0, r3",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,48,all dynamic instances first; then selected iteration/channel,planned
+IS-0013,2,qopcert_exact_requantize,0x36,4,eb02 025c,00 bf 00 bf,add.w,"r2, r2, r12, lsr #1",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,50,all dynamic instances first; then selected iteration/channel,planned
+IS-0014,1,qopcert_exact_requantize,0x3a,2,4291,00 bf,cmp,"r1, r2",REQUANT_CONTROL,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,54,all dynamic instances first; then selected iteration/channel,planned
+IS-0015,1,qopcert_exact_requantize,0x3c,2,bf88,00 bf,it,hi,REQUANT_CONTROL,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,54,all dynamic instances first; then selected iteration/channel,planned
+IS-0016,2,qopcert_exact_requantize,0x3e,2,3001,00 bf,addhi,"r0, #0x1",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,54,all dynamic instances first; then selected iteration/channel,planned
+IS-0017,1,qopcert_exact_requantize,0x40,2,4770,00 bf,bx,lr,REQUANT_CONTROL,RETURN,F8_CHECK_BRANCH_SKIP,58,all dynamic instances first; then selected iteration/channel,planned
+IS-0018,2,qopcert_shadow_requantize,0x4,2,4253,00 bf,rsbs,"r3, r2, #0",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,64,all dynamic instances first; then selected iteration/channel,planned
+IS-0019,1,qopcert_shadow_requantize,0x6,4,fa00 f00c,00 bf 00 bf,lsl.w,"r0, r0, r12",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,65,all dynamic instances first; then selected iteration/channel,planned
+IS-0020,1,qopcert_shadow_requantize,0xa,2,2a00,00 bf,cmp,"r2, #0x0",REQUANT_CONTROL,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,64,all dynamic instances first; then selected iteration/channel,planned
+IS-0021,1,qopcert_shadow_requantize,0xc,2,bfc8,00 bf,it,gt,REQUANT_CONTROL,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,64,all dynamic instances first; then selected iteration/channel,planned
+IS-0022,2,qopcert_shadow_requantize,0xe,2,2300,00 bf,movgt,"r3, #0x0",REQUANT_CONTROL,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,64,all dynamic instances first; then selected iteration/channel,planned
+IS-0023,1,qopcert_shadow_requantize,0x10,4,fb50 f011,00 bf 00 bf,smmulr,"r0, r0, r1",HIGH_MULTIPLY,REQUANT_MULTIPLY,F6B_SKIP_HIGH_MULT,35,all dynamic instances first; then selected iteration/channel,planned
+IS-0024,1,qopcert_shadow_requantize,0x14,2,0040,00 bf,lsls,"r0, r0, #0x1",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,66,all dynamic instances first; then selected iteration/channel,planned
+IS-0025,1,qopcert_shadow_requantize,0x16,2,4118,00 bf,asrs,"r0, r3",SHIFT_ROUND,SHIFT,F6C_SKIP_RIGHT_SHIFT,67,all dynamic instances first; then selected iteration/channel,planned
+IS-0026,1,qopcert_shadow_requantize,0x18,2,4770,00 bf,bx,lr,REQUANT_CONTROL,RETURN,F8_CHECK_BRANCH_SKIP,67,all dynamic instances first; then selected iteration/channel,planned
+IS-0027,2,qopcert_microkernel_2x2_exact,0x2,2,af03,00 bf,add,"r7, sp, #0xc",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,89,all dynamic instances first; then selected iteration/channel,planned
+IS-0028,2,qopcert_microkernel_2x2_exact,0x8,2,b087,00 bf,sub,"sp, #0x1c",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,89,all dynamic instances first; then selected iteration/channel,planned
+IS-0029,2,qopcert_microkernel_2x2_exact,0xa,4,e9d7 c602,00 bf 00 bf,ldrd,"r12, r6, [r7, #8]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,89,all dynamic instances first; then selected iteration/channel,planned
+IS-0030,2,qopcert_microkernel_2x2_exact,0xe,4,e9d6 6a00,00 bf 00 bf,ldrd,"r6, r10, [r6]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,90,all dynamic instances first; then selected iteration/channel,planned
+IS-0031,1,qopcert_microkernel_2x2_exact,0x12,4,f1bc 0f01,00 bf 00 bf,cmp.w,"r12, #0x1",LOOP_CONTROL,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0032,2,qopcert_microkernel_2x2_exact,0x16,2,9606,00 bf,str,"r6, [sp, #0x18]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0033,2,qopcert_microkernel_2x2_exact,0x18,4,f8cd a014,00 bf 00 bf,str.w,"r10, [sp, #0x14]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0034,1,qopcert_microkernel_2x2_exact,0x1c,2,db3e,00 bf,blt,0x9c <qopcert_microkernel_2x2_exact+0x9c> @ imm = #0x7c,LOOP_CONTROL,CONTROL_BRANCH,F1_OUTER_TRUNCATION/F2_INNER_TRUNCATION,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0035,2,qopcert_microkernel_2x2_exact,0x1e,2,4686,00 bf,mov,"lr, r0",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0036,2,qopcert_microkernel_2x2_exact,0x20,2,9806,00 bf,ldr,"r0, [sp, #0x18]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0037,2,qopcert_microkernel_2x2_exact,0x22,2,2500,00 bf,movs,"r5, #0x0",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0038,2,qopcert_microkernel_2x2_exact,0x24,2,9004,00 bf,str,"r0, [sp, #0x10]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0039,2,qopcert_microkernel_2x2_exact,0x26,2,a801,00 bf,add,"r0, sp, #0x4",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0040,2,qopcert_microkernel_2x2_exact,0x2c,4,f85e 4005,00 bf 00 bf,ldr.w,"r4, [lr, r5]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,97,all dynamic instances first; then selected iteration/channel,planned
+IS-0041,2,qopcert_microkernel_2x2_exact,0x30,2,594e,00 bf,ldr,"r6, [r1, r5]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,98,all dynamic instances first; then selected iteration/channel,planned
+IS-0042,2,qopcert_microkernel_2x2_exact,0x32,4,f852 b005,00 bf 00 bf,ldr.w,"r11, [r2, r5]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,99,all dynamic instances first; then selected iteration/channel,planned
+IS-0043,2,qopcert_microkernel_2x2_exact,0x36,2,4662,00 bf,mov,"r2, r12",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,99,all dynamic instances first; then selected iteration/channel,planned
+IS-0044,2,qopcert_microkernel_2x2_exact,0x38,4,f853 c005,00 bf 00 bf,ldr.w,"r12, [r3, r5]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,100,all dynamic instances first; then selected iteration/channel,planned
+IS-0045,2,qopcert_microkernel_2x2_exact,0x4c,2,4651,00 bf,mov,"r1, r10",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,28,all dynamic instances first; then selected iteration/channel,planned
+IS-0046,2,qopcert_microkernel_2x2_exact,0x56,2,4670,00 bf,mov,"r0, lr",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,28,all dynamic instances first; then selected iteration/channel,planned
+IS-0047,2,qopcert_microkernel_2x2_exact,0x60,2,4694,00 bf,mov,"r12, r2",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,28,all dynamic instances first; then selected iteration/channel,planned
+IS-0048,2,qopcert_microkernel_2x2_exact,0x62,2,9a06,00 bf,ldr,"r2, [sp, #0x18]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0049,1,qopcert_microkernel_2x2_exact,0x64,4,fb29 220a,00 bf 00 bf,smlad,"r2, r9, r10, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0050,1,qopcert_microkernel_2x2_exact,0x68,4,fb24 220b,00 bf 00 bf,smlad,"r2, r4, r11, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0051,2,qopcert_microkernel_2x2_exact,0x6c,2,9206,00 bf,str,"r2, [sp, #0x18]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0052,2,qopcert_microkernel_2x2_exact,0x6e,2,9a05,00 bf,ldr,"r2, [sp, #0x14]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0053,1,qopcert_microkernel_2x2_exact,0x70,4,fb29 220e,00 bf 00 bf,smlad,"r2, r9, lr, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0054,1,qopcert_microkernel_2x2_exact,0x74,4,fb24 2203,00 bf 00 bf,smlad,"r2, r4, r3, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0055,2,qopcert_microkernel_2x2_exact,0x78,2,9205,00 bf,str,"r2, [sp, #0x14]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0056,2,qopcert_microkernel_2x2_exact,0x7a,2,9a04,00 bf,ldr,"r2, [sp, #0x10]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0057,1,qopcert_microkernel_2x2_exact,0x7c,4,fb28 220a,00 bf 00 bf,smlad,"r2, r8, r10, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0058,1,qopcert_microkernel_2x2_exact,0x80,4,fb26 220b,00 bf 00 bf,smlad,"r2, r6, r11, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0059,2,qopcert_microkernel_2x2_exact,0x84,2,9204,00 bf,str,"r2, [sp, #0x10]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0060,1,qopcert_microkernel_2x2_exact,0x86,4,fb28 120e,00 bf 00 bf,smlad,"r2, r8, lr, r1",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0061,1,qopcert_microkernel_2x2_exact,0x8a,4,fb26 2a03,00 bf 00 bf,smlad,"r10, r6, r3, r2",MAC_BODY,MAC,F3_SKIP_MAC,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0062,2,qopcert_microkernel_2x2_exact,0x8e,2,ab01,00 bf,add,"r3, sp, #0x4",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,14,all dynamic instances first; then selected iteration/channel,planned
+IS-0063,2,qopcert_microkernel_2x2_exact,0x90,2,3504,00 bf,adds,"r5, #0x4",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0064,2,qopcert_microkernel_2x2_exact,0x92,2,cb0e,00 bf,ldm,"r3, {r1, r2, r3}",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0065,2,qopcert_microkernel_2x2_exact,0x94,2,4686,00 bf,mov,"lr, r0",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0066,1,qopcert_microkernel_2x2_exact,0x96,2,4565,00 bf,cmp,"r5, r12",LOOP_CONTROL,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0067,1,qopcert_microkernel_2x2_exact,0x98,2,dbc8,00 bf,blt,0x2c <qopcert_microkernel_2x2_exact+0x2c> @ imm = #-0x70,LOOP_CONTROL,CONTROL_BRANCH,F1_OUTER_TRUNCATION/F2_INNER_TRUNCATION,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0068,1,qopcert_microkernel_2x2_exact,0x9a,2,e001,00 bf,b,0xa0 <qopcert_microkernel_2x2_exact+0xa0> @ imm = #0x2,LOOP_CONTROL,CONTROL_BRANCH,F1_OUTER_TRUNCATION/F2_INNER_TRUNCATION,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0069,2,qopcert_microkernel_2x2_exact,0x9c,2,9806,00 bf,ldr,"r0, [sp, #0x18]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0070,2,qopcert_microkernel_2x2_exact,0x9e,2,9004,00 bf,str,"r0, [sp, #0x10]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0071,2,qopcert_microkernel_2x2_exact,0xa0,2,693e,00 bf,ldr,"r6, [r7, #0x10]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0072,2,qopcert_microkernel_2x2_exact,0xa2,4,f8d7 8014,00 bf 00 bf,ldr.w,"r8, [r7, #0x14]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,95,all dynamic instances first; then selected iteration/channel,planned
+IS-0073,2,qopcert_microkernel_2x2_exact,0xa6,2,6835,00 bf,ldr,"r5, [r6]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0074,2,qopcert_microkernel_2x2_exact,0xa8,4,f8d8 4000,00 bf 00 bf,ldr.w,"r4, [r8]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0075,2,qopcert_microkernel_2x2_exact,0xac,2,9806,00 bf,ldr,"r0, [sp, #0x18]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0076,2,qopcert_microkernel_2x2_exact,0xae,2,4629,00 bf,mov,"r1, r5",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0077,2,qopcert_microkernel_2x2_exact,0xb0,2,4622,00 bf,mov,"r2, r4",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0078,1,qopcert_microkernel_2x2_exact,0xb2,4,f7ff fffe,00 bf 00 bf,bl,0xb2 <qopcert_microkernel_2x2_exact+0xb2> @ imm = #-0x4,REQUANT_CALL,CALL,F8_CHECK_BRANCH_SKIP,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0079,2,qopcert_microkernel_2x2_exact,0xb6,4,f8d7 9018,00 bf 00 bf,ldr.w,"r9, [r7, #0x18]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0080,2,qopcert_microkernel_2x2_exact,0xba,2,6876,00 bf,ldr,"r6, [r6, #0x4]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0081,2,qopcert_microkernel_2x2_exact,0xbc,4,f8d8 b004,00 bf 00 bf,ldr.w,"r11, [r8, #0x4]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0082,2,qopcert_microkernel_2x2_exact,0xc0,2,4448,00 bf,add,"r0, r9",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,121,all dynamic instances first; then selected iteration/channel,planned
+IS-0083,2,qopcert_microkernel_2x2_exact,0xc2,2,9006,00 bf,str,"r0, [sp, #0x18]",DATA_PATH,STORE,F5_WRONG_STORE_INDEX,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0084,2,qopcert_microkernel_2x2_exact,0xc4,2,9805,00 bf,ldr,"r0, [sp, #0x14]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0085,2,qopcert_microkernel_2x2_exact,0xc6,2,4631,00 bf,mov,"r1, r6",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0086,2,qopcert_microkernel_2x2_exact,0xc8,2,465a,00 bf,mov,"r2, r11",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0087,1,qopcert_microkernel_2x2_exact,0xca,4,f7ff fffe,00 bf 00 bf,bl,0xca <qopcert_microkernel_2x2_exact+0xca> @ imm = #-0x4,REQUANT_CALL,CALL,F8_CHECK_BRANCH_SKIP,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0088,2,qopcert_microkernel_2x2_exact,0xce,4,eb00 0809,00 bf 00 bf,add.w,"r8, r0, r9",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,122,all dynamic instances first; then selected iteration/channel,planned
+IS-0089,2,qopcert_microkernel_2x2_exact,0xd2,2,9804,00 bf,ldr,"r0, [sp, #0x10]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,123,all dynamic instances first; then selected iteration/channel,planned
+IS-0090,2,qopcert_microkernel_2x2_exact,0xd4,2,4629,00 bf,mov,"r1, r5",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,123,all dynamic instances first; then selected iteration/channel,planned
+IS-0091,2,qopcert_microkernel_2x2_exact,0xd6,2,4622,00 bf,mov,"r2, r4",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,123,all dynamic instances first; then selected iteration/channel,planned
+IS-0092,1,qopcert_microkernel_2x2_exact,0xd8,4,f7ff fffe,00 bf 00 bf,bl,0xd8 <qopcert_microkernel_2x2_exact+0xd8> @ imm = #-0x4,REQUANT_CALL,CALL,F8_CHECK_BRANCH_SKIP,123,all dynamic instances first; then selected iteration/channel,planned
+IS-0093,2,qopcert_microkernel_2x2_exact,0xdc,4,eb00 0409,00 bf 00 bf,add.w,"r4, r0, r9",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,123,all dynamic instances first; then selected iteration/channel,planned
+IS-0094,2,qopcert_microkernel_2x2_exact,0xe0,2,4650,00 bf,mov,"r0, r10",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,124,all dynamic instances first; then selected iteration/channel,planned
+IS-0095,2,qopcert_microkernel_2x2_exact,0xe2,2,4631,00 bf,mov,"r1, r6",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,124,all dynamic instances first; then selected iteration/channel,planned
+IS-0096,2,qopcert_microkernel_2x2_exact,0xe4,2,465a,00 bf,mov,"r2, r11",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,124,all dynamic instances first; then selected iteration/channel,planned
+IS-0097,1,qopcert_microkernel_2x2_exact,0xe6,4,f7ff fffe,00 bf 00 bf,bl,0xe6 <qopcert_microkernel_2x2_exact+0xe6> @ imm = #-0x4,REQUANT_CALL,CALL,F8_CHECK_BRANCH_SKIP,124,all dynamic instances first; then selected iteration/channel,planned
+IS-0098,2,qopcert_microkernel_2x2_exact,0xea,2,9906,00 bf,ldr,"r1, [sp, #0x18]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0099,2,qopcert_microkernel_2x2_exact,0xec,2,4448,00 bf,add,"r0, r9",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,124,all dynamic instances first; then selected iteration/channel,planned
+IS-0100,2,qopcert_microkernel_2x2_exact,0xee,2,69fe,00 bf,ldr,"r6, [r7, #0x1c]",DATA_PATH,DATA_LOAD,F3_SKIP_MAC,124,all dynamic instances first; then selected iteration/channel,planned
+IS-0101,1,qopcert_microkernel_2x2_exact,0xf0,4,f301 0107,00 bf 00 bf,ssat,"r1, #0x8, r1",CLAMP,CLAMP,F6E_SKIP_CLAMP,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0102,1,qopcert_microkernel_2x2_exact,0xf4,4,f308 0207,00 bf 00 bf,ssat,"r2, #0x8, r8",CLAMP,CLAMP,F6E_SKIP_CLAMP,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0103,1,qopcert_microkernel_2x2_exact,0xf8,4,f304 0307,00 bf 00 bf,ssat,"r3, #0x8, r4",CLAMP,CLAMP,F6E_SKIP_CLAMP,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0104,1,qopcert_microkernel_2x2_exact,0xfc,4,f300 0007,00 bf 00 bf,ssat,"r0, #0x8, r0",CLAMP,CLAMP,F6E_SKIP_CLAMP,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0105,1,qopcert_microkernel_2x2_exact,0x100,2,7031,00 bf,strb,"r1, [r6]",OUTPUT_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,131,all dynamic instances first; then selected iteration/channel,planned
+IS-0106,1,qopcert_microkernel_2x2_exact,0x102,2,7072,00 bf,strb,"r2, [r6, #0x1]",OUTPUT_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,132,all dynamic instances first; then selected iteration/channel,planned
+IS-0107,1,qopcert_microkernel_2x2_exact,0x104,2,70b3,00 bf,strb,"r3, [r6, #0x2]",OUTPUT_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,133,all dynamic instances first; then selected iteration/channel,planned
+IS-0108,1,qopcert_microkernel_2x2_exact,0x106,2,70f0,00 bf,strb,"r0, [r6, #0x3]",OUTPUT_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,134,all dynamic instances first; then selected iteration/channel,planned
+IS-0109,2,qopcert_microkernel_2x2_exact,0x108,2,b007,00 bf,add,"sp, #0x1c",DATA_PATH,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,135,all dynamic instances first; then selected iteration/channel,planned
+IS-0110,2,qopcert_verify4_shadow,0x2,2,af03,00 bf,add,"r7, sp, #0xc",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0111,2,qopcert_verify4_shadow,0x8,4,f84d 3d04,00 bf 00 bf,str,"r3, [sp, #-4]!",CHECKER,STORE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0112,2,qopcert_verify4_shadow,0xc,4,e9d7 5603,00 bf 00 bf,ldrd,"r5, r6, [r7, #12]",CHECKER,DATA_LOAD,F3_SKIP_MAC,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0113,2,qopcert_verify4_shadow,0x10,2,4691,00 bf,mov,"r9, r2",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0114,2,qopcert_verify4_shadow,0x12,2,468a,00 bf,mov,"r10, r1",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0115,2,qopcert_verify4_shadow,0x14,2,4683,00 bf,mov,"r11, r0",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0116,2,qopcert_verify4_shadow,0x16,2,2400,00 bf,movs,"r4, #0x0",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0117,2,qopcert_verify4_shadow,0x18,4,f04f 0800,00 bf 00 bf,mov.w,"r8, #0x0",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,163,all dynamic instances first; then selected iteration/channel,planned
+IS-0118,2,qopcert_verify4_shadow,0x1c,2,9a00,00 bf,ldr,"r2, [sp]",CHECKER,DATA_LOAD,F3_SKIP_MAC,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0119,2,qopcert_verify4_shadow,0x1e,4,f85b 0028,00 bf 00 bf,ldr.w,"r0, [r11, r8, lsl #2]",CHECKER,DATA_LOAD,F3_SKIP_MAC,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0120,2,qopcert_verify4_shadow,0x22,4,f859 1028,00 bf 00 bf,ldr.w,"r1, [r9, r8, lsl #2]",CHECKER,DATA_LOAD,F3_SKIP_MAC,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0121,2,qopcert_verify4_shadow,0x26,4,f852 2028,00 bf 00 bf,ldr.w,"r2, [r2, r8, lsl #2]",CHECKER,DATA_LOAD,F3_SKIP_MAC,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0122,1,qopcert_verify4_shadow,0x2a,4,f7ff fffe,00 bf 00 bf,bl,0x2a <qopcert_verify4_shadow+0x2a> @ imm = #-0x4,CHECKER,CALL,F8_CHECK_BRANCH_SKIP,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0123,2,qopcert_verify4_shadow,0x2e,2,68b9,00 bf,ldr,"r1, [r7, #0x8]",CHECKER,DATA_LOAD,F3_SKIP_MAC,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0124,2,qopcert_verify4_shadow,0x30,2,4408,00 bf,add,"r0, r1",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,167,all dynamic instances first; then selected iteration/channel,planned
+IS-0125,1,qopcert_verify4_shadow,0x32,2,42a8,00 bf,cmp,"r0, r5",CHECKER,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0126,1,qopcert_verify4_shadow,0x34,2,bfd8,00 bf,it,le,CHECKER,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0127,2,qopcert_verify4_shadow,0x36,2,4628,00 bf,movle,"r0, r5",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,8,all dynamic instances first; then selected iteration/channel,planned
+IS-0128,2,qopcert_verify4_shadow,0x38,4,f91a 1008,00 bf 00 bf,ldrsb.w,"r1, [r10, r8]",CHECKER,DATA_LOAD,F3_SKIP_MAC,170,all dynamic instances first; then selected iteration/channel,planned
+IS-0129,1,qopcert_verify4_shadow,0x3c,2,42b0,00 bf,cmp,"r0, r6",CHECKER,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,9,all dynamic instances first; then selected iteration/channel,planned
+IS-0130,1,qopcert_verify4_shadow,0x3e,2,bfa8,00 bf,it,ge,CHECKER,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,9,all dynamic instances first; then selected iteration/channel,planned
+IS-0131,2,qopcert_verify4_shadow,0x40,2,4630,00 bf,movge,"r0, r6",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,9,all dynamic instances first; then selected iteration/channel,planned
+IS-0132,2,qopcert_verify4_shadow,0x42,2,1a08,00 bf,subs,"r0, r1, r0",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,170,all dynamic instances first; then selected iteration/channel,planned
+IS-0133,1,qopcert_verify4_shadow,0x44,2,bf48,00 bf,it,mi,CHECKER,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,7,all dynamic instances first; then selected iteration/channel,planned
+IS-0134,2,qopcert_verify4_shadow,0x46,2,4240,00 bf,rsbmi,"r0, r0, #0",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,7,all dynamic instances first; then selected iteration/channel,planned
+IS-0135,1,qopcert_verify4_shadow,0x48,2,2801,00 bf,cmp,"r0, #0x1",CHECKER,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,171,all dynamic instances first; then selected iteration/channel,planned
+IS-0136,2,qopcert_verify4_shadow,0x4a,4,f108 0801,00 bf 00 bf,add.w,"r8, r8, #0x1",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,165,all dynamic instances first; then selected iteration/channel,planned
+IS-0137,1,qopcert_verify4_shadow,0x4e,2,bf88,00 bf,it,hi,CHECKER,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,171,all dynamic instances first; then selected iteration/channel,planned
+IS-0138,1,qopcert_verify4_shadow,0x54,4,f1b8 0f04,00 bf 00 bf,cmp.w,"r8, #0x4",CHECKER,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,165,all dynamic instances first; then selected iteration/channel,planned
+IS-0139,1,qopcert_verify4_shadow,0x58,2,d1e0,00 bf,bne,0x1c <qopcert_verify4_shadow+0x1c> @ imm = #-0x40,CHECKER,CONTROL_BRANCH,F1_OUTER_TRUNCATION/F2_INNER_TRUNCATION,165,all dynamic instances first; then selected iteration/channel,planned
+IS-0140,2,qopcert_verify4_shadow,0x5a,2,4620,00 bf,mov,"r0, r4",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,173,all dynamic instances first; then selected iteration/channel,planned
+IS-0141,2,qopcert_verify4_shadow,0x5c,2,b001,00 bf,add,"sp, #0x4",CHECKER,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,173,all dynamic instances first; then selected iteration/channel,planned
+IS-0142,2,qopcert_infective_commit4,0x2,2,af02,00 bf,add,"r7, sp, #0x8",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,177,all dynamic instances first; then selected iteration/channel,planned
+IS-0143,2,qopcert_infective_commit4,0x4,2,4603,00 bf,mov,"r3, r0",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,177,all dynamic instances first; then selected iteration/channel,planned
+IS-0144,2,qopcert_infective_commit4,0x6,2,7800,00 bf,ldrb,"r0, [r0]",FAIL_SAFE_COMMIT,DATA_LOAD,F3_SKIP_MAC,185,all dynamic instances first; then selected iteration/channel,planned
+IS-0145,2,qopcert_infective_commit4,0x8,2,4694,00 bf,mov,"r12, r2",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,185,all dynamic instances first; then selected iteration/channel,planned
+IS-0146,2,qopcert_infective_commit4,0xa,2,785a,00 bf,ldrb,"r2, [r3, #0x1]",FAIL_SAFE_COMMIT,DATA_LOAD,F3_SKIP_MAC,186,all dynamic instances first; then selected iteration/channel,planned
+IS-0147,2,qopcert_infective_commit4,0xc,4,f893 e002,00 bf 00 bf,ldrb.w,"lr, [r3, #0x2]",FAIL_SAFE_COMMIT,DATA_LOAD,F3_SKIP_MAC,187,all dynamic instances first; then selected iteration/channel,planned
+IS-0148,2,qopcert_infective_commit4,0x10,2,78dc,00 bf,ldrb,"r4, [r3, #0x3]",FAIL_SAFE_COMMIT,DATA_LOAD,F3_SKIP_MAC,188,all dynamic instances first; then selected iteration/channel,planned
+IS-0149,1,qopcert_infective_commit4,0x12,2,2900,00 bf,cmp,"r1, #0x0",FAIL_SAFE_COMMIT,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,185,all dynamic instances first; then selected iteration/channel,planned
+IS-0150,1,qopcert_infective_commit4,0x14,2,bf18,00 bf,it,ne,FAIL_SAFE_COMMIT,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,185,all dynamic instances first; then selected iteration/channel,planned
+IS-0151,2,qopcert_infective_commit4,0x16,2,2000,00 bf,movne,"r0, #0x0",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,185,all dynamic instances first; then selected iteration/channel,planned
+IS-0152,1,qopcert_infective_commit4,0x18,2,7018,00 bf,strb,"r0, [r3]",FAIL_SAFE_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,185,all dynamic instances first; then selected iteration/channel,planned
+IS-0153,1,qopcert_infective_commit4,0x1a,2,bf18,00 bf,it,ne,FAIL_SAFE_COMMIT,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,186,all dynamic instances first; then selected iteration/channel,planned
+IS-0154,2,qopcert_infective_commit4,0x1c,2,2200,00 bf,movne,"r2, #0x0",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,186,all dynamic instances first; then selected iteration/channel,planned
+IS-0155,1,qopcert_infective_commit4,0x1e,2,705a,00 bf,strb,"r2, [r3, #0x1]",FAIL_SAFE_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,186,all dynamic instances first; then selected iteration/channel,planned
+IS-0156,1,qopcert_infective_commit4,0x20,2,bf18,00 bf,it,ne,FAIL_SAFE_COMMIT,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,187,all dynamic instances first; then selected iteration/channel,planned
+IS-0157,2,qopcert_infective_commit4,0x22,4,f04f 0e00,00 bf 00 bf,movne.w,"lr, #0x0",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,187,all dynamic instances first; then selected iteration/channel,planned
+IS-0158,1,qopcert_infective_commit4,0x26,4,f883 e002,00 bf 00 bf,strb.w,"lr, [r3, #0x2]",FAIL_SAFE_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,187,all dynamic instances first; then selected iteration/channel,planned
+IS-0159,1,qopcert_infective_commit4,0x2a,2,2900,00 bf,cmp,"r1, #0x0",FAIL_SAFE_COMMIT,CONTROL_COMPARE,F1_OUTER_TRUNCATION/F8_CHECK_BRANCH_SKIP,188,all dynamic instances first; then selected iteration/channel,planned
+IS-0160,1,qopcert_infective_commit4,0x2c,2,bf1c,00 bf,itt,ne,FAIL_SAFE_COMMIT,CONTROL_PREDICATE,F8_CHECK_BRANCH_SKIP,188,all dynamic instances first; then selected iteration/channel,planned
+IS-0161,2,qopcert_infective_commit4,0x2e,2,2400,00 bf,movne,"r4, #0x0",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,188,all dynamic instances first; then selected iteration/channel,planned
+IS-0162,2,qopcert_infective_commit4,0x34,2,4660,00 bf,mov,"r0, r12",FAIL_SAFE_COMMIT,POINTER_OR_DATA_UPDATE,F5_WRONG_STORE_INDEX,189,all dynamic instances first; then selected iteration/channel,planned
+IS-0163,1,qopcert_infective_commit4,0x36,2,70dc,00 bf,strb,"r4, [r3, #0x3]",FAIL_SAFE_COMMIT,OUTPUT_STORE,F4_SKIP_STORE,188,all dynamic instances first; then selected iteration/channel,planned
