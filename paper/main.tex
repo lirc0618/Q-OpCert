@@ -331,6 +331,9 @@ The study does not evaluate a complete network, model-level accuracy, other CMSI
 \section{Conclusion}
 Q-OpCert combines bounded-error shadow requantization, a channel-checksum MAC invariant, output-action and pointer checks, and a dual-rail infective commit for INT8 CMSIS-NN. On STM32F407, shadow, shadow+ABFT, and dual-rail state add 1.778\%, 5.348\%, and 5.445\% cycles. On STM32U575, the final mechanism adds 44.040\% against the matched baseline. The complete M33 campaign evaluated 1,971 profile-site pairs and recorded 229,525 trials. It found five blind-spot classes during development. After repair and full re-enumeration, no recorded trial silently violated the two-LSB contract. The main lesson is narrower than complete fault tolerance: protecting arithmetic is insufficient unless the checker also verifies the output store, exact destination, cross-call cursor, and its own metadata assumptions.
 
+\section*{Data Availability}
+The anonymous artifact provides source code, build and mutation scripts, the complete site denominator, final board records, and a portable result verifier at \url{https://anonymous.4open.science/r/Q-OpCert-BDC8}.
+
 \section*{Acknowledgment}
 OpenAI Codex assisted with language editing and consistency checks throughout the manuscript. It did not design or execute the experiments. The authors inspected the source data, verified every reported result, and retain responsibility for the manuscript. Project acknowledgments are omitted for double-blind review.
 

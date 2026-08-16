@@ -2,6 +2,8 @@
 
 This artifact supports the paper "Q-OpCert: Bounded-Error Shadow and ABFT Checks for Instruction-Skip Resilience in CMSIS-NN." It contains the protected source, campaign tooling, final static-site denominator, final board records, cost summaries, and a portable verifier for the headline results.
 
+Anonymous review URL: <https://anonymous.4open.science/r/Q-OpCert-BDC8>
+
 ## Quick verification
 
 From the artifact root, run:
@@ -67,4 +69,3 @@ This is an exhaustive census of the enumerated static instruction sites for thre
 ## Anonymity and provenance
 
 Local absolute paths have been removed from summaries and status records. Build caches, IDE metadata, temporary mutants, obsolete batches, and author-identifying material are excluded. File-level provenance is recorded in `MANIFEST.sha256`.
-
