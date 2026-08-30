@@ -1,8 +1,8 @@
 # Q-OpCert DATE 2027 Anonymous Artifact
 
-This artifact supports the paper "Q-OpCert: Bounded-Error Shadow and ABFT Checks for Instruction-Skip Resilience in CMSIS-NN." It contains the protected source, campaign tooling, final static-site denominator, final board records, cost summaries, and a portable verifier for the headline results.
+This artifact supports the paper "Q-OpCert: Bounded-Error Output Integrity against Instruction Skips in INT8 CMSIS-NN Convolution." It contains the protected source, campaign tooling, final static-site denominator, final board records, cost summaries, and a portable verifier for the headline results.
 
-Anonymous review URL: <https://anonymous.4open.science/r/Q-OpCert-BDC8>
+Anonymous review URL: <https://anonymous.4open.science/r/Q-OpCert-BDC8/README.md>
 
 ## Quick verification
 
@@ -29,7 +29,6 @@ The verifier reads the packaged CSV files, checks the 1,971-site denominator, re
 
 ## Layout
 
-- `paper/`: anonymous manuscript source, bibliography, and PDF.
 - `source/firmware/`: Q-OpCert harness and checker source.
 - `source/m33_project/`: STM32U575 bare-metal project files.
 - `source/cmsis_nn/`: CMSIS-NN headers, source, license, and upstream revision record. Two convolution sources contain the Q-OpCert integration.
